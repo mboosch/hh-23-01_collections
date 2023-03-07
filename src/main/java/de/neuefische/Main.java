@@ -66,9 +66,16 @@ public class Main {
             System.out.println("Key " + entry.getKey() + " Value " + entry.getValue());
         }
 
-
-
-
-
+        Set<Guest> guestList4 = new HashSet<>();
+        guestList4.add(new Guest("Thomas", "Spagetti"));
+        System.out.println("---------");
+        for (Guest guest : guestList4) {
+            System.out.println(guest);
+        }
+        System.out.println("---------");
+        guestList4.remove(new Guest("Thomas", "Spagetti"));
+        for (Guest guest : guestList4) {
+            System.out.println(guest);
+        }
     }
 }
