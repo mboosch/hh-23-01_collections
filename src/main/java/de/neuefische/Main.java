@@ -2,9 +2,7 @@ package de.neuefische;
 
 import de.neuefische.model.Guest;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -51,10 +49,22 @@ public class Main {
 
         System.out.println(guestList2.size());
 
+        Map<Integer, Guest> guestList3 = new HashMap<>();
 
+        guestList3.put(1, new Guest("Antonia", "Snacks"));
 
+        System.out.println(guestList3.get(1));
 
+        guestList3.remove(1);
+        System.out.println("---------");
+        System.out.println(guestList3.get(1));
+        guestList3.put(1, new Guest("Antonia", "Snacks"));
+        guestList3.put(2, new Guest("Anton", "Salat"));
+        System.out.println("---------");
 
+        for (Map.Entry<Integer, Guest> entry : guestList3.entrySet()) {
+            System.out.println("Key " + entry.getKey() + " Value " + entry.getValue());
+        }
 
 
 
